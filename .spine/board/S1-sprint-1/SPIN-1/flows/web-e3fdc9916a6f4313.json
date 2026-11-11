@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "url": "http://localhost:5174/#/",
+  "width": 1280,
+  "height": 800,
+  "step": 3,
+  "steps": [
+    {
+      "action": "scroll",
+      "selector": "footer"
+    },
+    {
+      "action": "assert",
+      "text": "© DoğuşMarket · SpineOS test projesi"
+    },
+    {
+      "action": "screenshot"
+    }
+  ],
+  "service": "web"
+}
