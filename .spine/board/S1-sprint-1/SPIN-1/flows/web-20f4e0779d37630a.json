@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "url": "http://localhost:5174/#/",
+  "width": 1280,
+  "height": 800,
+  "step": 5,
+  "steps": [
+    {
+      "action": "resize",
+      "width": 400,
+      "height": 844
+    },
+    {
+      "action": "assert",
+      "label": "D DoğuşMarket",
+      "role": "link"
+    },
+    {
+      "action": "screenshot"
+    },
+    {
+      "action": "goto",
+      "url": "/#/sepet"
+    },
+    {
+      "action": "assert",
+      "label": "D DoğuşMarket",
+      "role": "link"
+    },
+    {
+      "action": "screenshot"
+    }
+  ],
+  "service": "web"
+}
