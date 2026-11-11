@@ -1,0 +1,61 @@
+.app {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 32px 16px;
+  text-align: left;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.card {
+  border: 1px solid var(--border, #ddd);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+}
+
+.row input {
+  flex: 1;
+  padding: 6px 8px;
+}
+
+button {
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.count {
+  font-size: 48px;
+  margin: 8px 0;
+}
+
+.todos {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0;
+}
+
+.todos li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 0;
+}
+
+.todos li.done label {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.muted {
+  opacity: 0.7;
+}
