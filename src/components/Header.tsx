@@ -15,7 +15,7 @@ export function Header({ search, onSearch }: Props) {
         <a href="#/" className="logo" onClick={() => onSearch('')}>
           <span className="logo-mark">D</span>
           <span>
-            Doğuş<strong>Market</strong>
+            Doruk&amp;Yiğit <strong>Market</strong>
           </span>
         </a>
 

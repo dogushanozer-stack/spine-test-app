@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "url": "http://localhost:5175/#/",
+  "width": 1280,
+  "height": 800,
+  "step": 7,
+  "steps": [
+    {
+      "action": "resize",
+      "width": 400,
+      "height": 844
+    },
+    {
+      "action": "assert",
+      "label": "D Doruk&Yiğit Market",
+      "role": "link"
+    },
+    {
+      "action": "screenshot"
+    },
+    {
+      "action": "goto",
+      "url": "/#/sepet"
+    },
+    {
+      "action": "assert",
+      "text": "Sepetin boş"
+    },
+    {
+      "action": "screenshot"
+    },
+    {
+      "action": "resize",
+      "width": 1280,
+      "height": 800
+    },
+    {
+      "action": "assert",
+      "text": "Sepetim"
+    },
+    {
+      "action": "screenshot"
+    }
+  ],
+  "service": "web"
+}

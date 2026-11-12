@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "url": "http://localhost:5175/#/",
+  "width": 1280,
+  "height": 800,
+  "step": 6,
+  "steps": [
+    {
+      "action": "click",
+      "selector": "#root > main > div:nth-of-type(3) > article:nth-of-type(1) > div > button"
+    },
+    {
+      "action": "assert",
+      "selector": "header .badge"
+    },
+    {
+      "action": "click",
+      "selector": "#root > header > div > nav > a:nth-of-type(2)"
+    },
+    {
+      "action": "assert",
+      "label": "D Doruk&Yiğit Market",
+      "role": "link"
+    },
+    {
+      "action": "assert",
+      "text": "Kırmızı Gül"
+    },
+    {
+      "action": "screenshot"
+    },
+    {
+      "action": "click",
+      "label": "D Doruk&Yiğit Market",
+      "role": "link"
+    },
+    {
+      "action": "assert",
+      "text": "Tüm Ürünler"
+    },
+    {
+      "action": "screenshot"
+    }
+  ],
+  "service": "web"
+}
