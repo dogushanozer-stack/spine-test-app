@@ -11,7 +11,7 @@
     },
     {
       "action": "assert",
-      "label": "D DoğuşMarket",
+      "label": "D Doruk&Yiğit Market",
       "role": "link"
     },
     {
@@ -24,12 +24,12 @@
     },
     {
       "action": "assert",
-      "label": "D DoğuşMarket",
+      "label": "D Doruk&Yiğit Market",
       "role": "link"
     },
     {
       "action": "click",
-      "label": "D DoğuşMarket",
+      "label": "D Doruk&Yiğit Market",
       "role": "link"
     },
     {

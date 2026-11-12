@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "url": "http://localhost:5175/#/",
+  "width": 1280,
+  "height": 800,
+  "steps": [
+    {
+      "action": "click",
+      "label": "Volta Akıllı Saat Pro",
+      "role": "link"
+    },
+    {
+      "action": "assert",
+      "label": "D Doruk&Yiğit Market",
+      "role": "link"
+    },
+    {
+      "action": "screenshot"
+    },
+    {
+      "action": "click",
+      "label": "♡ Favoriler",
+      "role": "link"
+    },
+    {
+      "action": "assert",
+      "label": "D Doruk&Yiğit Market",
+      "role": "link"
+    },
+    {
+      "action": "click",
+      "label": "D Doruk&Yiğit Market",
+      "role": "link"
+    },
+    {
+      "action": "assert",
+      "text": "Tüm Ürünler"
+    },
+    {
+      "action": "screenshot"
+    }
+  ],
+  "service": "web"
+}
