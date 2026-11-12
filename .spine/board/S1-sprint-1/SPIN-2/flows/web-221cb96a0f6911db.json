@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "url": "http://localhost:5173/#/",
+  "width": 1280,
+  "height": 800,
+  "step": 3,
+  "steps": [
+    {
+      "action": "click",
+      "label": "Ürün, marka veya kategori ara",
+      "role": "searchbox"
+    },
+    {
+      "action": "assert",
+      "label": "D DoğuşMarket",
+      "role": "link"
+    },
+    {
+      "action": "screenshot"
+    }
+  ],
+  "service": "web"
+}
