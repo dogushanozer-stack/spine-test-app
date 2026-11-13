@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "url": "http://localhost:5174/#/",
+  "width": 1280,
+  "height": 800,
+  "step": 3,
+  "steps": [
+    {
+      "action": "click",
+      "label": "Elektroniği Keşfet →",
+      "role": "button"
+    },
+    {
+      "action": "assert",
+      "label": "Elektronik",
+      "role": "heading"
+    },
+    {
+      "action": "click",
+      "label": "Tümü",
+      "role": "button"
+    },
+    {
+      "action": "assert",
+      "text": "Evini yenile, kargo bedava"
+    },
+    {
+      "action": "assert",
+      "text": "21 ürün"
+    },
+    {
+      "action": "screenshot"
+    },
+    {
+      "action": "click",
+      "label": "Ev & Yaşam →",
+      "role": "button"
+    },
+    {
+      "action": "assert",
+      "text": "Evini yenile, kargo bedava",
+      "not": true
+    },
+    {
+      "action": "assert",
+      "label": "Ev & Yaşam",
+      "role": "heading"
+    },
+    {
+      "action": "screenshot"
+    }
+  ],
+  "service": "web"
+}

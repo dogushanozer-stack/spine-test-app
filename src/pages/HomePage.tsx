@@ -14,6 +14,52 @@ interface Props {
 
 const normalize = (s: string) => s.toLocaleLowerCase('tr-TR')
 
+type BannerVariant = 'orange' | 'blue' | 'green'
+
+interface Banner {
+  id: string
+  kicker: string
+  title: string
+  sub: string
+  cta: string
+  category: CategoryId
+  art: string
+  variant: BannerVariant
+}
+
+const banners: Banner[] = [
+  {
+    id: 'cicek',
+    kicker: 'Sevdiklerine sürpriz yap',
+    title: "Aynı gün teslimat çiçeklerde %20'ye varan indirim",
+    sub: '500 ₺ ve üzeri alışverişlerde kargo bedava.',
+    cta: 'Çiçekleri Keşfet →',
+    category: 'cicek',
+    art: '💐',
+    variant: 'orange',
+  },
+  {
+    id: 'elektronik',
+    kicker: 'Teknoloji haftası',
+    title: "Kulaklıklarda %30'a varan indirim",
+    sub: 'Seçili markalarda hızlı teslimat.',
+    cta: 'Elektroniği Keşfet →',
+    category: 'elektronik',
+    art: '🎧',
+    variant: 'blue',
+  },
+  {
+    id: 'ev',
+    kicker: 'Yeni sezon',
+    title: 'Evini yenile, kargo bedava',
+    sub: 'Ev & Yaşam ürünlerinde fırsatlar.',
+    cta: 'Ev & Yaşam →',
+    category: 'ev',
+    art: '🛋️',
+    variant: 'green',
+  },
+]
+
 export function HomePage({ search, category, onCategory }: Props) {
   const [sort, setSort] = useState<SortKey>('recommended')
   const [onlyFast, setOnlyFast] = useState(false)
@@ -52,19 +98,23 @@ export function HomePage({ search, category, onCategory }: Props) {
   return (
     <>
       {!search.trim() && !category && (
-        <section className="hero">
-          <div>
-            <p className="hero-kicker">Sevdiklerine sürpriz yap</p>
-            <h1>Aynı gün teslimat çiçeklerde %20'ye varan indirim</h1>
-            <p className="hero-sub">500 ₺ ve üzeri alışverişlerde kargo bedava.</p>
-            <button className="btn btn-light" onClick={() => onCategory('cicek')}>
-              Çiçekleri Keşfet →
-            </button>
-          </div>
-          <div className="hero-art" aria-hidden>
-            💐
-          </div>
-        </section>
+        <div className="hero-stack">
+          {banners.map((b) => (
+            <section key={b.id} className={`hero hero--${b.variant}`}>
+              <div>
+                <p className="hero-kicker">{b.kicker}</p>
+                <h1>{b.title}</h1>
+                <p className="hero-sub">{b.sub}</p>
+                <button className="btn btn-light" onClick={() => onCategory(b.category)}>
+                  {b.cta}
+                </button>
+              </div>
+              <div className="hero-art" aria-hidden>
+                {b.art}
+              </div>
+            </section>
+          ))}
+        </div>
       )}
 
       <CategoryBar selected={category} onSelect={onCategory} />
