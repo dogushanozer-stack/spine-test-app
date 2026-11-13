@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "url": "http://localhost:5175/#/",
+  "width": 1280,
+  "height": 800,
+  "step": 1,
+  "steps": [
+    {
+      "action": "assert",
+      "selector": ".logo-mark"
+    },
+    {
+      "action": "assert",
+      "text": "Doruk&Yiğit Market"
+    },
+    {
+      "action": "assert",
+      "label": "D Doruk&Yiğit Market",
+      "role": "link"
+    },
+    {
+      "action": "assert",
+      "text": "&amp;",
+      "not": true
+    },
+    {
+      "action": "screenshot"
+    },
+    {
+      "action": "scroll",
+      "selector": "footer"
+    },
+    {
+      "action": "assert",
+      "text": "© Doruk&Yiğit Market · SpineOS test projesi"
+    },
+    {
+      "action": "screenshot"
+    }
+  ],
+  "service": "web"
+}

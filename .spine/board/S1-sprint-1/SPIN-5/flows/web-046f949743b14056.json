@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "url": "http://localhost:5175/#/",
+  "width": 1280,
+  "height": 800,
+  "steps": [
+    {
+      "action": "click",
+      "label": "Ürün, marka veya kategori ara",
+      "role": "searchbox"
+    },
+    {
+      "action": "assert",
+      "label": "D Doruk&Yiğit Market",
+      "role": "link"
+    },
+    {
+      "action": "screenshot"
+    }
+  ],
+  "service": "web"
+}
