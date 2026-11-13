@@ -11,6 +11,8 @@ import { ShopProvider } from './store/ShopProvider'
 import type { CategoryId } from './types'
 import './App.css'
 
+const currentYear = new Date().getFullYear()
+
 function Routes() {
   const route = useRoute()
   const [search, setSearch] = useState('')
@@ -43,7 +45,7 @@ function Routes() {
       <main className="container">{page}</main>
       <footer className="footer">
         <div className="container footer-inner">
-          <span>© Doruk&amp;Yiğit Market · SpineOS test projesi</span>
+          <span>© {currentYear} Doruk&amp;Yiğit Market · SpineOS test projesi</span>
           <span>Güvenli Alışveriş · Kolay İade · 7/24 Destek</span>
         </div>
       </footer>

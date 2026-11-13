@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "url": "http://localhost:5174/#/",
+  "width": 1280,
+  "height": 800,
+  "step": 2,
+  "steps": [
+    {
+      "action": "scroll",
+      "selector": "footer"
+    },
+    {
+      "action": "assert",
+      "text": "© 2026 DoğuşMarket · SpineOS test projesi"
+    },
+    {
+      "action": "assert",
+      "text": "Güvenli Alışveriş · Kolay İade · 7/24 Destek"
+    },
+    {
+      "action": "screenshot"
+    }
+  ],
+  "service": "web"
+}
