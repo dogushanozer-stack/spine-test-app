@@ -43,7 +43,7 @@ function Routes() {
       <main className="container">{page}</main>
       <footer className="footer">
         <div className="container footer-inner">
-          <span>© DoğuşMarket · SpineOS test projesi</span>
+          <span>© Doruk&amp;Yiğit Market · SpineOS test projesi</span>
           <span>Güvenli Alışveriş · Kolay İade · 7/24 Destek</span>
         </div>
       </footer>
