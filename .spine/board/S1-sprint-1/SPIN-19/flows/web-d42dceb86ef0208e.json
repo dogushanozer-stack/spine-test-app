@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "url": "http://localhost:5174/#/",
+  "width": 1280,
+  "height": 800,
+  "step": 4,
+  "steps": [
+    {
+      "action": "click",
+      "selector": "#root > header > div > nav > a:nth-of-type(2)"
+    },
+    {
+      "action": "assert",
+      "text": "Sepetin boş"
+    },
+    {
+      "action": "scroll",
+      "selector": "footer"
+    },
+    {
+      "action": "assert",
+      "text": "© 2026 DoğuşMarket · SpineOS test projesi"
+    },
+    {
+      "action": "assert",
+      "text": "Güvenli Alışveriş · Kolay İade · 7/24 Destek"
+    },
+    {
+      "action": "screenshot"
+    },
+    {
+      "action": "goto",
+      "url": "/#/"
+    },
+    {
+      "action": "click",
+      "selector": ".product-grid > article:nth-of-type(1) button.btn-primary"
+    },
+    {
+      "action": "assert",
+      "selector": "header .badge"
+    },
+    {
+      "action": "click",
+      "selector": "#root > header > div > nav > a:nth-of-type(2)"
+    },
+    {
+      "action": "assert",
+      "text": "Sepetin boş",
+      "not": true
+    },
+    {
+      "action": "scroll",
+      "selector": "footer"
+    },
+    {
+      "action": "assert",
+      "text": "© 2026 DoğuşMarket · SpineOS test projesi"
+    },
+    {
+      "action": "screenshot"
+    }
+  ],
+  "service": "web"
+}
