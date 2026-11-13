@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "url": "http://localhost:5174/#/",
+  "width": 1280,
+  "height": 800,
+  "step": 4,
+  "steps": [
+    {
+      "action": "assert",
+      "text": "Kulaklıklarda %30'a varan indirim"
+    },
+    {
+      "action": "type",
+      "label": "Ürün, marka veya kategori ara",
+      "role": "searchbox",
+      "text": "kulaklık"
+    },
+    {
+      "action": "assert",
+      "text": "Aynı gün teslimat çiçeklerde %20'ye varan indirim",
+      "not": true
+    },
+    {
+      "action": "assert",
+      "text": "Kulaklıklarda %30'a varan indirim",
+      "not": true
+    },
+    {
+      "action": "assert",
+      "text": "Evini yenile, kargo bedava",
+      "not": true
+    },
+    {
+      "action": "screenshot"
+    },
+    {
+      "action": "type",
+      "label": "Ürün, marka veya kategori ara",
+      "role": "searchbox",
+      "text": ""
+    },
+    {
+      "action": "assert",
+      "text": "Kulaklıklarda %30'a varan indirim"
+    },
+    {
+      "action": "screenshot"
+    }
+  ],
+  "service": "web"
+}

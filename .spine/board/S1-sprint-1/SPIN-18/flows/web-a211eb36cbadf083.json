@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "url": "http://localhost:5174/#/",
+  "width": 1280,
+  "height": 800,
+  "step": 5,
+  "steps": [
+    {
+      "action": "resize",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "action": "assert",
+      "text": "Kulaklıklarda %30'a varan indirim"
+    },
+    {
+      "action": "assert",
+      "label": "Elektroniği Keşfet →",
+      "role": "button"
+    },
+    {
+      "action": "screenshot"
+    },
+    {
+      "action": "scroll",
+      "label": "Ev & Yaşam →",
+      "role": "button"
+    },
+    {
+      "action": "assert",
+      "label": "Ev & Yaşam →",
+      "role": "button"
+    },
+    {
+      "action": "screenshot"
+    },
+    {
+      "action": "resize",
+      "width": 1280,
+      "height": 800
+    },
+    {
+      "action": "scroll",
+      "direction": "up"
+    },
+    {
+      "action": "assert",
+      "label": "Elektroniği Keşfet →",
+      "role": "button"
+    },
+    {
+      "action": "screenshot"
+    }
+  ],
+  "service": "web"
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "url": "http://localhost:5174/#/",
+  "width": 1280,
+  "height": 800,
+  "step": 2,
+  "steps": [
+    {
+      "action": "click",
+      "label": "Elektroniği Keşfet →",
+      "role": "button"
+    },
+    {
+      "action": "assert",
+      "text": "Kulaklıklarda %30'a varan indirim",
+      "not": true
+    },
+    {
+      "action": "assert",
+      "text": "Aynı gün teslimat çiçeklerde %20'ye varan indirim",
+      "not": true
+    },
+    {
+      "action": "assert",
+      "label": "Elektronik",
+      "role": "heading"
+    },
+    {
+      "action": "screenshot"
+    }
+  ],
+  "service": "web"
+}

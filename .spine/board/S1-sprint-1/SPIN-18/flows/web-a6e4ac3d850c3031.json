@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "url": "http://localhost:5174/#/",
+  "width": 880,
+  "height": 800,
+  "steps": [
+    {
+      "action": "assert",
+      "label": "Elektroniği Keşfet →",
+      "role": "button"
+    },
+    {
+      "action": "screenshot"
+    },
+    {
+      "action": "click",
+      "selector": ".product-grid > article:nth-of-type(1) button.btn-primary"
+    },
+    {
+      "action": "assert",
+      "selector": "header .badge"
+    },
+    {
+      "action": "click",
+      "selector": "#root > header > div > nav > a:nth-of-type(2)"
+    },
+    {
+      "action": "assert",
+      "text": "Sepetin boş",
+      "not": true
+    },
+    {
+      "action": "click",
+      "label": "D DoğuşMarket",
+      "role": "link"
+    },
+    {
+      "action": "assert",
+      "text": "Kulaklıklarda %30'a varan indirim"
+    },
+    {
+      "action": "screenshot"
+    }
+  ],
+  "service": "web"
+}

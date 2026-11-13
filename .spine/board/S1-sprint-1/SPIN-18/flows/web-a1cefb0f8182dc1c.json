@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "url": "http://localhost:5174/#/",
+  "width": 1280,
+  "height": 800,
+  "step": 1,
+  "steps": [
+    {
+      "action": "assert",
+      "text": "Aynı gün teslimat çiçeklerde %20'ye varan indirim"
+    },
+    {
+      "action": "assert",
+      "text": "Kulaklıklarda %30'a varan indirim"
+    },
+    {
+      "action": "assert",
+      "text": "Evini yenile, kargo bedava"
+    },
+    {
+      "action": "assert",
+      "label": "Elektroniği Keşfet →",
+      "role": "button"
+    },
+    {
+      "action": "assert",
+      "label": "Ev & Yaşam →",
+      "role": "button"
+    },
+    {
+      "action": "screenshot"
+    }
+  ],
+  "service": "web"
+}
