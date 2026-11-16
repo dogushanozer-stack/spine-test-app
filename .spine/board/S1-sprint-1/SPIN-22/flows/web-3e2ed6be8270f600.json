@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "url": "http://localhost:5174/#/",
+  "width": 1280,
+  "height": 800,
+  "step": 5,
+  "steps": [
+    {
+      "action": "click",
+      "label": "powerbank",
+      "role": "button"
+    },
+    {
+      "action": "assert",
+      "text": "\"powerbank\" için sonuçlar"
+    },
+    {
+      "action": "click",
+      "label": "D Doruk&Yiğit Market",
+      "role": "link"
+    },
+    {
+      "action": "assert",
+      "label": "Ürün, marka veya kategori ara",
+      "role": "searchbox",
+      "value": ""
+    },
+    {
+      "action": "assert",
+      "text": "Tüm Ürünler"
+    },
+    {
+      "action": "assert",
+      "text": "21 ürün"
+    },
+    {
+      "action": "assert",
+      "selector": ".popular-searches .popular-label:text-is(\"Popüler:\")"
+    },
+    {
+      "action": "assert",
+      "label": "kulaklık",
+      "role": "button"
+    },
+    {
+      "action": "assert",
+      "label": "powerbank",
+      "role": "button"
+    },
+    {
+      "action": "screenshot"
+    }
+  ],
+  "service": "web"
+}

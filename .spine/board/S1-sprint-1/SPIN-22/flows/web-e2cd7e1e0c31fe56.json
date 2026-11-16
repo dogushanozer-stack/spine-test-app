@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "url": "http://localhost:5174/#/sepet",
+  "width": 1280,
+  "height": 800,
+  "step": 4,
+  "steps": [
+    {
+      "action": "assert",
+      "text": "Sepetin boş"
+    },
+    {
+      "action": "click",
+      "label": "parfüm",
+      "role": "button"
+    },
+    {
+      "action": "assert",
+      "text": "\"parfüm\" için sonuçlar"
+    },
+    {
+      "action": "assert",
+      "label": "Esans Kadın Parfüm 50 ml",
+      "role": "link"
+    },
+    {
+      "action": "assert",
+      "label": "Ürün, marka veya kategori ara",
+      "role": "searchbox",
+      "value": "parfüm"
+    },
+    {
+      "action": "screenshot"
+    }
+  ],
+  "service": "web"
+}

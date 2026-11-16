@@ -1,3 +1,4 @@
+import { POPULAR_SEARCHES } from '../data/products'
 import { navigate } from '../router'
 import { useShop } from '../store/shop-context'
 
@@ -21,27 +22,45 @@ export function Header({ search, onSearch, onQuickBuy }: Props) {
           </span>
         </a>
 
-        <form
-          className="search"
-          role="search"
-          onSubmit={(e) => {
-            e.preventDefault()
-            navigate('/')
-          }}
-        >
-          <input
-            type="search"
-            placeholder="Ürün, marka veya kategori ara"
-            value={search}
-            onChange={(e) => {
-              onSearch(e.target.value)
-              if (window.location.hash && window.location.hash !== '#/') navigate('/')
+        <div className="search-area">
+          <form
+            className="search"
+            role="search"
+            onSubmit={(e) => {
+              e.preventDefault()
+              navigate('/')
             }}
-          />
-          <button type="submit" aria-label="Ara">
-            🔍
-          </button>
-        </form>
+          >
+            <input
+              type="search"
+              placeholder="Ürün, marka veya kategori ara"
+              value={search}
+              onChange={(e) => {
+                onSearch(e.target.value)
+                if (window.location.hash && window.location.hash !== '#/') navigate('/')
+              }}
+            />
+            <button type="submit" aria-label="Ara">
+              🔍
+            </button>
+          </form>
+          <div className="popular-searches" aria-label="Popüler aramalar">
+            <span className="popular-label">Popüler:</span>
+            {POPULAR_SEARCHES.map((term) => (
+              <button
+                key={term}
+                type="button"
+                className="popular-chip"
+                onClick={() => {
+                  onSearch(term)
+                  if (window.location.hash && window.location.hash !== '#/') navigate('/')
+                }}
+              >
+                {term}
+              </button>
+            ))}
+          </div>
+        </div>
 
         <nav className="header-actions">
           <a href="#/favoriler" className="header-link">

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "url": "http://localhost:5174/#/",
+  "width": 1280,
+  "height": 800,
+  "step": 2,
+  "steps": [
+    {
+      "action": "click",
+      "label": "kulaklık",
+      "role": "button"
+    },
+    {
+      "action": "assert",
+      "label": "Ürün, marka veya kategori ara",
+      "role": "searchbox",
+      "value": "kulaklık"
+    },
+    {
+      "action": "assert",
+      "text": "\"kulaklık\" için sonuçlar"
+    },
+    {
+      "action": "assert",
+      "label": "Volta Kablosuz Kulak İçi Kulaklık",
+      "role": "link"
+    },
+    {
+      "action": "screenshot"
+    }
+  ],
+  "service": "web"
+}
