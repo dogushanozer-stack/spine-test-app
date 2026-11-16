@@ -7,8 +7,9 @@ import { HomePage } from './pages/HomePage'
 import { LoginPage } from './pages/LoginPage'
 import { ProductPage } from './pages/ProductPage'
 import { SuccessPage } from './pages/SuccessPage'
-import { useRoute } from './router'
+import { navigate, useRoute } from './router'
 import { ShopProvider } from './store/ShopProvider'
+import { useShop } from './store/shop-context'
 import type { CategoryId } from './types'
 import './App.css'
 
@@ -18,12 +19,32 @@ function Routes() {
   const route = useRoute()
   const [search, setSearch] = useState('')
   const [category, setCategory] = useState<CategoryId | null>(null)
+  const { addToCart } = useShop()
+  // Ürün sayfasındaki adet; ürün kimliğiyle eşleşmezse 1 sayılır (ürün değişince sıfırlanır).
+  const [selection, setSelection] = useState<{ id: number; quantity: number } | null>(null)
 
   let page
+  let onQuickBuy: (() => void) | undefined
   switch (route.name) {
-    case 'product':
-      page = <ProductPage key={route.id} id={route.id} />
+    case 'product': {
+      const id = route.id
+      const quantity = selection?.id === id ? selection.quantity : 1
+      page = (
+        <ProductPage
+          key={id}
+          id={id}
+          quantity={quantity}
+          onQuantityChange={(value) => setSelection({ id, quantity: value })}
+        />
+      )
+      if (getProduct(id)) {
+        onQuickBuy = () => {
+          addToCart(id, quantity)
+          navigate('/odeme')
+        }
+      }
       break
+    }
     case 'cart':
       page = <CartPage />
       break
@@ -45,7 +66,7 @@ function Routes() {
 
   return (
     <>
-      <Header search={search} onSearch={setSearch} />
+      <Header search={search} onSearch={setSearch} onQuickBuy={onQuickBuy} />
       <main className="container">{page}</main>
       <footer className="footer">
         <div className="container footer-inner">

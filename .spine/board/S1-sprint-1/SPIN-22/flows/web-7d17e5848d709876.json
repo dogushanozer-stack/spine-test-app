@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "url": "http://localhost:5174/#/",
+  "width": 1280,
+  "height": 800,
+  "step": 6,
+  "steps": [
+    {
+      "action": "resize",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "action": "assert",
+      "label": "powerbank",
+      "role": "button"
+    },
+    {
+      "action": "screenshot"
+    },
+    {
+      "action": "click",
+      "label": "spor ayakkabı",
+      "role": "button"
+    },
+    {
+      "action": "assert",
+      "text": "\"spor ayakkabı\" için sonuçlar",
+      "screenshot": true
+    },
+    {
+      "action": "goto",
+      "url": "/#/sepet"
+    },
+    {
+      "action": "assert",
+      "text": "Sepetin boş"
+    },
+    {
+      "action": "assert",
+      "label": "kulaklık",
+      "role": "button",
+      "screenshot": true
+    },
+    {
+      "action": "resize",
+      "width": 1280,
+      "height": 800
+    },
+    {
+      "action": "goto",
+      "url": "/#/"
+    },
+    {
+      "action": "assert",
+      "label": "powerbank",
+      "role": "button"
+    },
+    {
+      "action": "screenshot"
+    }
+  ],
+  "service": "web"
+}

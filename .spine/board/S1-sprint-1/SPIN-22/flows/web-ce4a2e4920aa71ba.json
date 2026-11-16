@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "url": "http://localhost:5174/#/",
+  "width": 1280,
+  "height": 800,
+  "step": 1,
+  "steps": [
+    {
+      "action": "assert",
+      "selector": ".popular-searches .popular-label:text-is(\"Popüler:\")"
+    },
+    {
+      "action": "assert",
+      "selector": ".popular-chip:nth-of-type(1):text-is(\"kulaklık\")"
+    },
+    {
+      "action": "assert",
+      "label": "kulaklık",
+      "role": "button"
+    },
+    {
+      "action": "assert",
+      "label": "akıllı saat",
+      "role": "button"
+    },
+    {
+      "action": "assert",
+      "label": "spor ayakkabı",
+      "role": "button"
+    },
+    {
+      "action": "assert",
+      "label": "parfüm",
+      "role": "button"
+    },
+    {
+      "action": "assert",
+      "label": "powerbank",
+      "role": "button"
+    },
+    {
+      "action": "screenshot"
+    }
+  ],
+  "service": "web"
+}

@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "url": "http://localhost:5174/#/urun/1",
+  "width": 1280,
+  "height": 800,
+  "steps": [
+    {
+      "action": "resize",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "action": "assert",
+      "selector": "button[aria-label=\"Hızlı Al\"]"
+    },
+    {
+      "action": "assert",
+      "selector": "button[aria-label=\"Hızlı Al\"] .header-icon"
+    },
+    {
+      "action": "screenshot"
+    },
+    {
+      "action": "resize",
+      "width": 320,
+      "height": 700
+    },
+    {
+      "action": "screenshot"
+    },
+    {
+      "action": "resize",
+      "width": 880,
+      "height": 800
+    },
+    {
+      "action": "screenshot"
+    },
+    {
+      "action": "resize",
+      "width": 1280,
+      "height": 800
+    },
+    {
+      "action": "assert",
+      "text": "Hızlı Al"
+    },
+    {
+      "action": "screenshot"
+    }
+  ],
+  "service": "web"
+}

@@ -37,5 +37,7 @@ export function getProduct(id: number): Product | undefined {
   return products.find((p) => p.id === id)
 }
 
+export const POPULAR_SEARCHES = ['kulaklık', 'akıllı saat', 'spor ayakkabı', 'parfüm', 'powerbank']
+
 export const FREE_SHIPPING_LIMIT = 500
 export const SHIPPING_FEE = 49.9

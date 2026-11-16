@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "url": "http://localhost:5174/#/urun/1",
+  "width": 1280,
+  "height": 800,
+  "step": 5,
+  "steps": [
+    {
+      "action": "click",
+      "label": "Artır",
+      "role": "button"
+    },
+    {
+      "action": "assert",
+      "selector": ".qty span:text-is(\"2\")"
+    },
+    {
+      "action": "scroll",
+      "selector": "#root > main > section:nth-of-type(2) > div > article:nth-of-type(1) > div > a",
+      "screenshot": true
+    },
+    {
+      "action": "click",
+      "selector": "#root > main > section:nth-of-type(2) > div > article:nth-of-type(1) > div > a"
+    },
+    {
+      "action": "assert",
+      "text": "Yeşil Köşe Beyaz Orkide",
+      "timeout": 5
+    },
+    {
+      "action": "assert",
+      "selector": ".qty span:text-is(\"1\")"
+    },
+    {
+      "action": "assert",
+      "selector": "button[aria-label=\"Hızlı Al\"]"
+    },
+    {
+      "action": "scroll",
+      "selector": ".qty"
+    },
+    {
+      "action": "screenshot"
+    }
+  ],
+  "service": "web"
+}
