@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "url": "http://localhost:5174/#/urun/1",
+  "width": 1280,
+  "height": 800,
+  "steps": [
+    {
+      "action": "click",
+      "label": "Artır",
+      "role": "button"
+    },
+    {
+      "action": "click",
+      "selector": "main button.btn-primary:not(.btn-block)"
+    },
+    {
+      "action": "assert",
+      "text": "Kırmızı Gül Buketi (11 Adet)"
+    },
+    {
+      "action": "assert",
+      "selector": "header .badge:text-is(\"2\")"
+    },
+    {
+      "action": "assert",
+      "selector": "button[aria-label=\"Hızlı Al\"]",
+      "not": true
+    },
+    {
+      "action": "screenshot"
+    }
+  ],
+  "service": "web"
+}

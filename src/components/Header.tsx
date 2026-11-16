@@ -4,9 +4,11 @@ import { useShop } from '../store/shop-context'
 interface Props {
   search: string
   onSearch: (value: string) => void
+  /** Verilirse Sepetim'in yanında "Hızlı Al" düğmesi görünür. */
+  onQuickBuy?: () => void
 }
 
-export function Header({ search, onSearch }: Props) {
+export function Header({ search, onSearch, onQuickBuy }: Props) {
   const { cartCount, favorites } = useShop()
 
   return (
@@ -52,6 +54,12 @@ export function Header({ search, onSearch }: Props) {
             <span>Sepetim</span>
             {cartCount > 0 && <span className="badge">{cartCount}</span>}
           </a>
+          {onQuickBuy && (
+            <button type="button" className="header-link header-quick" onClick={onQuickBuy} aria-label="Hızlı Al">
+              <span className="header-icon">⚡</span>
+              <span>Hızlı Al</span>
+            </button>
+          )}
         </nav>
       </div>
     </header>

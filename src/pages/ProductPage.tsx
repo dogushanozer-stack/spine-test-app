@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { ProductCard } from '../components/ProductCard'
 import { Stars } from '../components/Stars'
 import { categories, getProduct, products } from '../data/products'
@@ -6,10 +5,15 @@ import { navigate } from '../router'
 import { useShop } from '../store/shop-context'
 import { discountPercent, formatPrice } from '../utils/format'
 
-export function ProductPage({ id }: { id: number }) {
+interface Props {
+  id: number
+  quantity: number
+  onQuantityChange: (quantity: number) => void
+}
+
+export function ProductPage({ id, quantity, onQuantityChange }: Props) {
   const product = getProduct(id)
   const { addToCart, toggleFavorite, isFavorite } = useShop()
-  const [quantity, setQuantity] = useState(1)
 
   if (!product) {
     return (
@@ -59,11 +63,11 @@ export function ProductPage({ id }: { id: number }) {
 
           <div className="detail-actions">
             <div className="qty">
-              <button onClick={() => setQuantity((q) => Math.max(1, q - 1))} aria-label="Azalt">
+              <button onClick={() => onQuantityChange(Math.max(1, quantity - 1))} aria-label="Azalt">
                 −
               </button>
               <span>{quantity}</span>
-              <button onClick={() => setQuantity((q) => Math.min(10, q + 1))} aria-label="Artır">
+              <button onClick={() => onQuantityChange(Math.min(10, quantity + 1))} aria-label="Artır">
                 +
               </button>
             </div>
