@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "url": "http://localhost:5174/#/",
+  "width": 1280,
+  "height": 800,
+  "step": 3,
+  "steps": [
+    {
+      "action": "click",
+      "label": "akıllı saat",
+      "role": "button"
+    },
+    {
+      "action": "assert",
+      "text": "\"akıllı saat\" için sonuçlar"
+    },
+    {
+      "action": "assert",
+      "selector": ".product-grid > article:nth-of-type(1)"
+    },
+    {
+      "action": "assert",
+      "text": "bulunamadı",
+      "not": true
+    },
+    {
+      "action": "screenshot"
+    },
+    {
+      "action": "click",
+      "label": "spor ayakkabı",
+      "role": "button"
+    },
+    {
+      "action": "assert",
+      "text": "\"spor ayakkabı\" için sonuçlar"
+    },
+    {
+      "action": "assert",
+      "selector": ".product-grid > article:nth-of-type(1)"
+    },
+    {
+      "action": "assert",
+      "text": "bulunamadı",
+      "not": true
+    },
+    {
+      "action": "screenshot"
+    },
+    {
+      "action": "click",
+      "label": "parfüm",
+      "role": "button"
+    },
+    {
+      "action": "assert",
+      "text": "\"parfüm\" için sonuçlar"
+    },
+    {
+      "action": "assert",
+      "selector": ".product-grid > article:nth-of-type(1)"
+    },
+    {
+      "action": "assert",
+      "text": "bulunamadı",
+      "not": true
+    },
+    {
+      "action": "screenshot"
+    },
+    {
+      "action": "click",
+      "label": "powerbank",
+      "role": "button"
+    },
+    {
+      "action": "assert",
+      "text": "\"powerbank\" için sonuçlar"
+    },
+    {
+      "action": "assert",
+      "selector": ".product-grid > article:nth-of-type(1)"
+    },
+    {
+      "action": "assert",
+      "text": "bulunamadı",
+      "not": true
+    },
+    {
+      "action": "screenshot"
+    }
+  ],
+  "service": "web"
+}

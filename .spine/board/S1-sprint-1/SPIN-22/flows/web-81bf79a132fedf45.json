@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "url": "http://localhost:5174/#/urun/1",
+  "width": 1280,
+  "height": 800,
+  "steps": [
+    {
+      "action": "assert",
+      "text": "Kırmızı Gül Buketi (11 Adet)"
+    },
+    {
+      "action": "click",
+      "label": "akıllı saat",
+      "role": "button"
+    },
+    {
+      "action": "assert",
+      "text": "\"akıllı saat\" için sonuçlar"
+    },
+    {
+      "action": "assert",
+      "label": "Volta Akıllı Saat Pro",
+      "role": "link"
+    },
+    {
+      "action": "click",
+      "label": "Ürün, marka veya kategori ara",
+      "role": "searchbox"
+    },
+    {
+      "action": "press",
+      "key": "Tab"
+    },
+    {
+      "action": "press",
+      "key": "Tab"
+    },
+    {
+      "action": "press",
+      "key": "Enter"
+    },
+    {
+      "action": "assert",
+      "text": "\"kulaklık\" için sonuçlar"
+    },
+    {
+      "action": "press",
+      "key": "Tab"
+    },
+    {
+      "action": "press",
+      "key": "Space"
+    },
+    {
+      "action": "assert",
+      "text": "\"akıllı saat\" için sonuçlar",
+      "screenshot": true
+    },
+    {
+      "action": "type",
+      "label": "Ürün, marka veya kategori ara",
+      "text": "gül"
+    },
+    {
+      "action": "assert",
+      "text": "\"gül\" için sonuçlar"
+    },
+    {
+      "action": "type",
+      "label": "Ürün, marka veya kategori ara",
+      "text": ""
+    },
+    {
+      "action": "assert",
+      "text": "21 ürün"
+    },
+    {
+      "action": "screenshot"
+    }
+  ],
+  "service": "web"
+}
