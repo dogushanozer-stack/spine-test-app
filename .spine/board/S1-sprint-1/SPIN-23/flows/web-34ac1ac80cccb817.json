@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "url": "http://localhost:5174/#/giris",
+  "width": 1280,
+  "height": 800,
+  "step": 3,
+  "steps": [
+    {
+      "action": "click",
+      "selector": "#root > main > form > button"
+    },
+    {
+      "action": "assert",
+      "text": "Geçerli bir e-posta gir"
+    },
+    {
+      "action": "assert",
+      "text": "Şifre en az 6 karakter olmalı"
+    },
+    {
+      "action": "assert",
+      "selector": "#root > main > form > div > label:nth-of-type(1) > input[aria-invalid=true]"
+    },
+    {
+      "action": "assert",
+      "selector": "#root > main > form > div > label:nth-of-type(2) > input[aria-invalid=true]"
+    },
+    {
+      "action": "assert",
+      "label": "Giriş Yap",
+      "role": "heading"
+    },
+    {
+      "action": "screenshot"
+    }
+  ],
+  "service": "web"
+}

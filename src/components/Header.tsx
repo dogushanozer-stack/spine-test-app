@@ -73,12 +73,12 @@ export function Header({ search, onSearch, onQuickBuy }: Props) {
             <span>Sepetim</span>
             {cartCount > 0 && <span className="badge">{cartCount}</span>}
           </a>
-          {onQuickBuy && (
-            <button type="button" className="header-link header-quick" onClick={onQuickBuy} aria-label="Hızlı Al">
-              <span className="header-icon">⚡</span>
-              <span>Hızlı Al</span>
-            </button>
-          )}
+          <a href="#/giris" className="header-link" aria-label="Giriş Yap">
+            <span className="header-icon" aria-hidden="true">
+              👤
+            </span>
+            <span>Giriş Yap</span>
+          </a>
         </nav>
       </div>
     </header>

@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "url": "http://localhost:5174/#/giris",
+  "width": 1280,
+  "height": 800,
+  "step": 4,
+  "steps": [
+    {
+      "action": "type",
+      "label": "E-posta",
+      "text": "abc"
+    },
+    {
+      "action": "type",
+      "label": "Şifre",
+      "text": "123"
+    },
+    {
+      "action": "press",
+      "key": "Enter"
+    },
+    {
+      "action": "assert",
+      "text": "Geçerli bir e-posta gir"
+    },
+    {
+      "action": "assert",
+      "text": "Şifre en az 6 karakter olmalı"
+    },
+    {
+      "action": "assert",
+      "selector": "input[type=password]"
+    },
+    {
+      "action": "assert",
+      "label": "Şifre",
+      "role": "textbox",
+      "value": "123"
+    },
+    {
+      "action": "screenshot"
+    },
+    {
+      "action": "type",
+      "label": "E-posta",
+      "text": "test@ornek.com"
+    },
+    {
+      "action": "click",
+      "selector": "#root > main > form > button"
+    },
+    {
+      "action": "assert",
+      "text": "Geçerli bir e-posta gir",
+      "not": true
+    },
+    {
+      "action": "assert",
+      "text": "Şifre en az 6 karakter olmalı"
+    },
+    {
+      "action": "screenshot"
+    }
+  ],
+  "service": "web"
+}

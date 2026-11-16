@@ -7,6 +7,7 @@ export type Route =
   | { name: 'favorites' }
   | { name: 'checkout' }
   | { name: 'success' }
+  | { name: 'login' }
 
 function parse(hash: string): Route {
   const path = hash.replace(/^#/, '') || '/'
@@ -16,6 +17,7 @@ function parse(hash: string): Route {
   if (path === '/favoriler') return { name: 'favorites' }
   if (path === '/odeme') return { name: 'checkout' }
   if (path === '/siparis-tamam') return { name: 'success' }
+  if (path === '/giris') return { name: 'login' }
   return { name: 'home' }
 }
 

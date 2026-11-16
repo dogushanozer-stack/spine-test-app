@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "url": "http://localhost:5174/#/giris",
+  "width": 1280,
+  "height": 800,
+  "step": 5,
+  "steps": [
+    {
+      "action": "type",
+      "label": "E-posta",
+      "text": "test@ornek.com"
+    },
+    {
+      "action": "type",
+      "label": "Şifre",
+      "text": "123456"
+    },
+    {
+      "action": "click",
+      "selector": "#root > main > form > button"
+    },
+    {
+      "action": "assert",
+      "text": "Giriş başarılı (demo)."
+    },
+    {
+      "action": "assert",
+      "label": "Alışverişe Dön",
+      "role": "link"
+    },
+    {
+      "action": "screenshot"
+    },
+    {
+      "action": "click",
+      "label": "Alışverişe Dön",
+      "role": "link"
+    },
+    {
+      "action": "assert",
+      "text": "21 ürün"
+    },
+    {
+      "action": "assert",
+      "text": "Tüm Ürünler"
+    },
+    {
+      "action": "screenshot"
+    }
+  ],
+  "service": "web"
+}
