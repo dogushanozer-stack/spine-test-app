@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "url": "http://localhost:5174/#/urun/9999",
+  "width": 1280,
+  "height": 800,
+  "step": 6,
+  "steps": [
+    {
+      "action": "assert",
+      "text": "Ürün bulunamadı"
+    },
+    {
+      "action": "assert",
+      "selector": "button[aria-label=\"Hızlı Al\"]",
+      "not": true
+    },
+    {
+      "action": "assert",
+      "text": "Hızlı Al",
+      "not": true
+    },
+    {
+      "action": "screenshot"
+    }
+  ],
+  "service": "web"
+}

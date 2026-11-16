@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "url": "http://localhost:5174/#/",
+  "width": 1280,
+  "height": 800,
+  "steps": [
+    {
+      "action": "assert",
+      "text": "Tüm Ürünler"
+    },
+    {
+      "action": "assert",
+      "label": "♡ Favoriler",
+      "role": "link"
+    },
+    {
+      "action": "assert",
+      "label": "🛒 Sepetim",
+      "role": "link"
+    },
+    {
+      "action": "assert",
+      "selector": "button[aria-label=\"Hızlı Al\"]",
+      "not": true
+    },
+    {
+      "action": "assert",
+      "text": "Hızlı Al",
+      "not": true,
+      "screenshot": true
+    },
+    {
+      "action": "click",
+      "selector": ".product-grid > article:nth-of-type(1) .product-title"
+    },
+    {
+      "action": "assert",
+      "selector": "button[aria-label=\"Hızlı Al\"]"
+    },
+    {
+      "action": "screenshot"
+    }
+  ],
+  "service": "web"
+}

@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "url": "http://localhost:5174/#/urun/1",
+  "width": 1280,
+  "height": 800,
+  "steps": [
+    {
+      "action": "click",
+      "label": "Artır",
+      "role": "button"
+    },
+    {
+      "action": "click",
+      "label": "Artır",
+      "role": "button"
+    },
+    {
+      "action": "goto",
+      "url": "/#/favoriler"
+    },
+    {
+      "action": "assert",
+      "selector": "button[aria-label=\"Hızlı Al\"]",
+      "not": true,
+      "screenshot": true
+    },
+    {
+      "action": "goto",
+      "url": "/#/urun/1"
+    },
+    {
+      "action": "assert",
+      "selector": "button[aria-label=\"Hızlı Al\"]"
+    },
+    {
+      "action": "screenshot"
+    }
+  ],
+  "service": "web"
+}

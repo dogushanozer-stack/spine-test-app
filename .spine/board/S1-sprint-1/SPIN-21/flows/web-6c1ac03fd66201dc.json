@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "url": "http://localhost:5174/#/urun/1",
+  "width": 1280,
+  "height": 800,
+  "steps": [
+    {
+      "action": "click",
+      "label": "Hızlı Al",
+      "role": "button"
+    },
+    {
+      "action": "assert",
+      "text": "Sipariş Özeti"
+    },
+    {
+      "action": "click",
+      "selector": "#root > header > div > nav > a:nth-of-type(2)"
+    },
+    {
+      "action": "assert",
+      "text": "Sepetim"
+    },
+    {
+      "action": "assert",
+      "selector": "button[aria-label=\"Hızlı Al\"]",
+      "not": true
+    },
+    {
+      "action": "assert",
+      "text": "Hızlı Al",
+      "not": true
+    },
+    {
+      "action": "screenshot"
+    }
+  ],
+  "service": "web"
+}
