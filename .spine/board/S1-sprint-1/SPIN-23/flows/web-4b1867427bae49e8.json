@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "url": "http://localhost:5174/#/",
+  "width": 1280,
+  "height": 800,
+  "step": 2,
+  "steps": [
+    {
+      "action": "click",
+      "label": "Giriş Yap",
+      "role": "link"
+    },
+    {
+      "action": "assert",
+      "label": "Giriş Yap",
+      "role": "heading"
+    },
+    {
+      "action": "assert",
+      "label": "E-posta",
+      "role": "textbox"
+    },
+    {
+      "action": "assert",
+      "selector": "input[type=password][autocomplete=current-password]"
+    },
+    {
+      "action": "assert",
+      "selector": "footer"
+    },
+    {
+      "action": "screenshot"
+    }
+  ],
+  "service": "web"
+}

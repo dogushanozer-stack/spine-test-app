@@ -728,6 +728,16 @@
   padding: 20px 24px;
 }
 
+.login {
+  max-width: 420px;
+  margin: 24px auto;
+}
+
+.login-note {
+  margin-top: 12px;
+  text-align: center;
+}
+
 .checkout .section-title + .muted {
   margin: -10px 0 12px;
 }

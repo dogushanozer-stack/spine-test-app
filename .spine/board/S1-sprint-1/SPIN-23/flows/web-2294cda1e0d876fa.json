@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "url": "http://localhost:5174/#/",
+  "width": 880,
+  "height": 800,
+  "step": 6,
+  "steps": [
+    {
+      "action": "assert",
+      "selector": "a[aria-label=\"Giriş Yap\"]"
+    },
+    {
+      "action": "screenshot"
+    },
+    {
+      "action": "resize",
+      "width": 800,
+      "height": 800
+    },
+    {
+      "action": "assert",
+      "selector": "a[aria-label=\"Giriş Yap\"] .header-icon"
+    },
+    {
+      "action": "screenshot"
+    },
+    {
+      "action": "resize",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "action": "assert",
+      "selector": "a[aria-label=\"Giriş Yap\"]"
+    },
+    {
+      "action": "screenshot"
+    },
+    {
+      "action": "resize",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "action": "screenshot"
+    },
+    {
+      "action": "resize",
+      "width": 320,
+      "height": 700
+    },
+    {
+      "action": "screenshot"
+    },
+    {
+      "action": "click",
+      "label": "Giriş Yap",
+      "role": "link"
+    },
+    {
+      "action": "assert",
+      "label": "Giriş Yap",
+      "role": "heading"
+    },
+    {
+      "action": "click",
+      "selector": "#root > main > form > button"
+    },
+    {
+      "action": "assert",
+      "text": "Geçerli bir e-posta gir"
+    },
+    {
+      "action": "screenshot"
+    },
+    {
+      "action": "resize",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "action": "screenshot"
+    }
+  ],
+  "service": "web"
+}

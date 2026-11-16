@@ -4,6 +4,7 @@ import { CartPage } from './pages/CartPage'
 import { CheckoutPage } from './pages/CheckoutPage'
 import { FavoritesPage } from './pages/FavoritesPage'
 import { HomePage } from './pages/HomePage'
+import { LoginPage } from './pages/LoginPage'
 import { ProductPage } from './pages/ProductPage'
 import { SuccessPage } from './pages/SuccessPage'
 import { useRoute } from './router'
@@ -34,6 +35,9 @@ function Routes() {
       break
     case 'success':
       page = <SuccessPage />
+      break
+    case 'login':
+      page = <LoginPage />
       break
     default:
       page = <HomePage search={search} category={category} onCategory={setCategory} />

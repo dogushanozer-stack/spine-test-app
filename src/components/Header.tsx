@@ -52,6 +52,12 @@ export function Header({ search, onSearch }: Props) {
             <span>Sepetim</span>
             {cartCount > 0 && <span className="badge">{cartCount}</span>}
           </a>
+          <a href="#/giris" className="header-link" aria-label="Giriş Yap">
+            <span className="header-icon" aria-hidden="true">
+              👤
+            </span>
+            <span>Giriş Yap</span>
+          </a>
         </nav>
       </div>
     </header>
